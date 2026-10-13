@@ -83,15 +83,15 @@ object EarnRewardedInterstitialLoadFingerprint : Fingerprint(
     )
 )
 
-// z50.a: main countdown finish callback, calls IZPHPROMain.N0 which
-// stops the VPN service and resets the UI.
+// z50.a: main countdown finish callback. It tears down the VPN when the timer
+// expires (calls back into IZPHPROMain). Matched by exact class and method
+// name only: the method is unique inside z50 (siblings are b, onStart,
+// onStop), and the callee name is R8-generated so it can shift between
+// builds of the same app version.
 object MainTimerFinishFingerprint : Fingerprint(
     definingClass = "Ldefpackage/z50;",
     name = "a",
-    returnType = "V",
-    filters = listOf(
-        methodCall(definingClass = MAIN, name = "N0")
-    )
+    returnType = "V"
 )
 
 // TimeManagerService$a.a: service countdown finish callback, launches

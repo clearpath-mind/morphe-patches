@@ -1,10 +1,8 @@
 # 🧩 clearpath-mind Patches
 
-Patches for IZPH VPN PRO: remove ads and unlimited connection time.
+Morphe patches for apps I use.
 
-## ❓ About
-
-Custom Morphe patches targeting `com.izphprov2.net` (IZPH VPN PRO v5.9).
+Currently supported: IZPH VPN PRO (`com.izphprov2.net` v5.9) — remove ads and unlimited connection time.
 
 ### How to use these patches
 

@@ -3,7 +3,7 @@ group = "app.clearpathmind"
 patches {
     about {
         name = "clearpath-mind Patches"
-        description = "Patches for IZPH VPN PRO (remove ads, unlimited connection time)"
+        description = "Morphe patches for apps I use"
         source = "git@github.com:clearpath-mind/morphe-patches.git"
         author = "clearpath-mind"
         contact = "na"
