@@ -1,3 +1,9 @@
+## [1.0.0-dev.3](https://github.com/clearpath-mind/morphe-patches/compare/v1.0.0-dev.2...v1.0.0-dev.3) (2026-10-13)
+
+### 🐛 Bug Fixes
+
+* use real Lz50; descriptor instead of jadx defpackage display name ([cecf4b8](https://github.com/clearpath-mind/morphe-patches/commit/cecf4b8960f2f77328c18c96564938eca08bfb96))
+
 ## [1.0.0-dev.2](https://github.com/clearpath-mind/morphe-patches/compare/v1.0.0-dev.1...v1.0.0-dev.2) (2026-10-13)
 
 ### 🐛 Bug Fixes
