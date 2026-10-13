@@ -1,3 +1,9 @@
+## [1.0.0-dev.4](https://github.com/clearpath-mind/morphe-patches/compare/v1.0.0-dev.3...v1.0.0-dev.4) (2026-10-13)
+
+### ✨ New Features
+
+* disable anti-tamper data wipe so patched builds can boot ([592381d](https://github.com/clearpath-mind/morphe-patches/commit/592381d064e33a5be516be31edf06538d0221f15))
+
 ## [1.0.0-dev.3](https://github.com/clearpath-mind/morphe-patches/compare/v1.0.0-dev.2...v1.0.0-dev.3) (2026-10-13)
 
 ### 🐛 Bug Fixes

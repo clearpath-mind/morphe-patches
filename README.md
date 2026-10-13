@@ -11,9 +11,9 @@ Click here to add these patches to Morphe: https://morphe.software/add-source?gi
 ## 🩹 Patches list
 
 <!-- PATCHES_START EXPANDED -->
-> **[v1.0.0-dev.3](https://github.com/clearpath-mind/morphe-patches/releases/tag/v1.0.0-dev.3)**&nbsp;&nbsp;•&nbsp;&nbsp;`dev`&nbsp;&nbsp;•&nbsp;&nbsp;2 patches total
+> **[v1.0.0-dev.4](https://github.com/clearpath-mind/morphe-patches/releases/tag/v1.0.0-dev.4)**&nbsp;&nbsp;•&nbsp;&nbsp;`dev`&nbsp;&nbsp;•&nbsp;&nbsp;3 patches total
 <details open>
-<summary>📦 IZPH VPN PRO&nbsp;&nbsp;•&nbsp;&nbsp;2 patches</summary>
+<summary>📦 IZPH VPN PRO&nbsp;&nbsp;•&nbsp;&nbsp;3 patches</summary>
 <br>
 
 **🎯 Supported versions:**
@@ -23,6 +23,7 @@ Click here to add these patches to Morphe: https://morphe.software/add-source?gi
 
 | 💊&nbsp;Patch | 📜&nbsp;Description | ⚙️&nbsp;Options |
 |----------|----------------|-----------|
+| [Disable data wipe](#disable-data-wipe) | Stops the app from clearing its data when startup integrity checks fail on patched builds. Also disables the in-app reset option. |  |
 | [Remove ads](#remove-ads) |  |  |
 | [Unlimited connection time](#unlimited-connection-time) | Prevents the VPN from disconnecting when the connection timer runs out. |  |
 

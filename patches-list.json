@@ -1,7 +1,33 @@
 {
   "NOTE": "Do NOT manually edit this file. This file is automatically updated when semantic release (release.yml) runs. Manually editing this file can break your releases and break third party tools that use this file.",
-  "version": "1.0.0-dev.3",
+  "version": "1.0.0-dev.4",
   "patches": [
+    {
+      "name": "Disable data wipe",
+      "description": "Stops the app from clearing its data when startup integrity checks fail on patched builds. Also disables the in-app reset option.",
+      "default": true,
+      "category": null,
+      "compatiblePackages": [
+        {
+          "packageName": "com.izphprov2.net",
+          "name": "IZPH VPN PRO",
+          "description": null,
+          "apkFileType": "APK",
+          "appIconColor": "#0B57D0",
+          "signatures": null,
+          "targets": [
+            {
+              "version": "5.9",
+              "versionCodes": null,
+              "isExperimental": false,
+              "minSdk": null,
+              "description": null
+            }
+          ]
+        }
+      ],
+      "options": []
+    },
     {
       "name": "Remove ads",
       "description": null,
