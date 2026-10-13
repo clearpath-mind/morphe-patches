@@ -84,12 +84,12 @@ object EarnRewardedInterstitialLoadFingerprint : Fingerprint(
 )
 
 // z50.a: main countdown finish callback. It tears down the VPN when the timer
-// expires (calls back into IZPHPROMain). Matched by exact class and method
-// name only: the method is unique inside z50 (siblings are b, onStart,
-// onStop), and the callee name is R8-generated so it can shift between
-// builds of the same app version.
+// expires (calls back into IZPHPROMain).
+// NOTE: jadx renders this class as "defpackage/z50", but its real DEX
+// descriptor is "Lz50;" (R8 moved it to the root package). Always use the
+// real descriptor here, not the jadx display name.
 object MainTimerFinishFingerprint : Fingerprint(
-    definingClass = "Ldefpackage/z50;",
+    definingClass = "Lz50;",
     name = "a",
     returnType = "V"
 )

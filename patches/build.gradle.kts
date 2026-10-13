@@ -2,7 +2,7 @@ group = "app.clearpathmind"
 
 patches {
     about {
-        name = "clearpath-mind Patches"
+        name = "ClearpathMind Patches"
         description = "Morphe patches for apps I use"
         source = "git@github.com:clearpath-mind/morphe-patches.git"
         author = "clearpath-mind"
