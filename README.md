@@ -1,16 +1,14 @@
-# 👋🧩 Morphe Patches template
+# 🧩 clearpath-mind Patches
 
-Template repository for Morphe Patches.
+Patches for IZPH VPN PRO: remove ads and unlimited connection time.
 
 ## ❓ About
 
-Patches for apps I like.
-
-<!-- TODO: Update this about section with a brief introduction/summary about this repo and what it offers. -->
+Custom Morphe patches targeting `com.izphprov2.net` (IZPH VPN PRO v5.9).
 
 ### How to use these patches
 
-Click here to add these patches to Morphe: https://morphe.software/add-source?github=xyz-user/xyz-patches
+Click here to add these patches to Morphe: https://morphe.software/add-source?github=clearpath-mind/morphe-patches
 
 ## 🩹 Patches list
 
@@ -88,4 +86,4 @@ See the [Morphe documentation](https://github.com/MorpheApp/morphe-documentation
 
 ## 📜 License
 
-UserXYZ Patches are licensed under the [GNU General Public License v3.0](LICENSE)
+clearpath-mind Patches are licensed under the [GNU General Public License v3.0](LICENSE)
