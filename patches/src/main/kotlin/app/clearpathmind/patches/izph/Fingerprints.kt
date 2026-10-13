@@ -4,6 +4,20 @@ import app.morphe.patcher.Fingerprint
 import app.morphe.patcher.methodCall
 import com.android.tools.smali.dexlib2.AccessFlags
 
+// MobileAdsInitProvider1.<clinit>: trojanized ads init provider. Its static
+// initializer wipes app data unless APKPure signature files
+// (/META-INF/KEY0.RSA or /META-INF/BNDLTOOL.RSA) are loadable, which is
+// never the case for re-signed builds. Providers run before Application
+// startup, so this fires before anything else. The wipe call below is
+// removed while the rest of init is left intact.
+object ProviderInitFingerprint : Fingerprint(
+    definingClass = "Lcom/google/android/gms/ads/MobileAdsInitProvider1;",
+    name = "<clinit>",
+    filters = listOf(
+        methodCall(name = "clearApplicationUserData")
+    )
+)
+
 private const val MAIN = "Lrenz/javacodez/vpn/activities/IZPHPROMain;"
 private const val EARN = "Lrenz/javacodez/vpn/activities/EarnTimeManagerActivity;"
 private const val INTERSTITIAL_AD = "Lcom/google/android/libraries/ads/mobile/sdk/interstitial/InterstitialAd;"

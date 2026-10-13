@@ -2,6 +2,7 @@ package app.clearpathmind.patches.izph
 
 import app.clearpathmind.patches.izph.Constants.COMPATIBILITY_IZPH_VPN_PRO
 import app.morphe.patcher.extensions.InstructionExtensions.addInstructions
+import app.morphe.patcher.extensions.InstructionExtensions.removeInstruction
 import app.morphe.patcher.patch.bytecodePatch
 
 @Suppress("unused")
@@ -19,5 +20,14 @@ val disableDataWipePatch = bytecodePatch(
         // plus a restart, so no patched build can boot. Nopping the single
         // wipe routine disarms all of them at once.
         ResetAppFingerprint.method.addInstructions(0, "return-void")
+
+        // The trojanized ads init provider wipes data in its static
+        // initializer (runs before Application startup) when the APKPure
+        // signature files are absent. Remove only the wipe call and keep
+        // the rest of provider init intact.
+        ProviderInitFingerprint.apply {
+            val wipeIndex = this.instructionMatches.first().index
+            this.method.removeInstruction(wipeIndex)
+        }
     }
 }
