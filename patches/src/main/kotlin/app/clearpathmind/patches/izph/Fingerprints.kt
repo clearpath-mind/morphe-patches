@@ -146,3 +146,16 @@ object EarnTimerFinishFingerprint : Fingerprint(
         )
     )
 )
+
+// IZPHPROApplication.onCreate: reflectively calls RenzUtils.initializeApp,
+// whose native code kills the process when the APK signature does not match
+// the original. That reflective call is the last Method.invoke in onCreate;
+// the patch removes only it, keeping loadLibrary and the other checks.
+object NativeInitCallFingerprint : Fingerprint(
+    definingClass = "Lrenz/javacodez/vpn/activities/IZPHPROApplication;",
+    name = "onCreate",
+    returnType = "V",
+    filters = listOf(
+        methodCall(name = "invoke")
+    )
+)

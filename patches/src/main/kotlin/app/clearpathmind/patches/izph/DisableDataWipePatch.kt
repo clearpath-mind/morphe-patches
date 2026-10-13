@@ -29,5 +29,14 @@ val disableDataWipePatch = bytecodePatch(
             val wipeIndex = this.instructionMatches.first().index
             this.method.removeInstruction(wipeIndex)
         }
+
+        // The native RenzUtils.initializeApp check kills re-signed builds
+        // during Application startup. Its reflective call is the last
+        // Method.invoke in IZPHPROApplication.onCreate; remove only it so
+        // the native library still loads and the other checks still run.
+        NativeInitCallFingerprint.apply {
+            val initIndex = this.instructionMatches.last().index
+            this.method.removeInstruction(initIndex)
+        }
     }
 }
