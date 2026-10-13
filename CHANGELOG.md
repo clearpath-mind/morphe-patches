@@ -1,3 +1,9 @@
+## [1.0.0-dev.5](https://github.com/clearpath-mind/morphe-patches/compare/v1.0.0-dev.4...v1.0.0-dev.5) (2026-10-13)
+
+### 🐛 Bug Fixes
+
+* neutralize provider init wipe that kills re-signed builds at startup ([7adc1d9](https://github.com/clearpath-mind/morphe-patches/commit/7adc1d99e020c2341ee67f450fe6016a81a1b081))
+
 ## [1.0.0-dev.4](https://github.com/clearpath-mind/morphe-patches/compare/v1.0.0-dev.3...v1.0.0-dev.4) (2026-10-13)
 
 ### ✨ New Features
