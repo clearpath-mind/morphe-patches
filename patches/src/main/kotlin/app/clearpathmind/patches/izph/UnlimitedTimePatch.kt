@@ -12,6 +12,8 @@ val unlimitedTimePatch = bytecodePatch(
 ) {
     compatibleWith(COMPATIBILITY_IZPH_VPN_PRO)
 
+    dependsOn(disableDataWipePatch)
+
     execute {
         // Connection time is enforced by defpackage.j3 countdown timers whose
         // on-finish callbacks tear down the VPN. Nopping the three callbacks

@@ -11,6 +11,8 @@ val removeAdsPatch = bytecodePatch(
 ) {
     compatibleWith(COMPATIBILITY_IZPH_VPN_PRO)
 
+    dependsOn(disableDataWipePatch)
+
     execute {
         // Every target below only loads or shows an ad, so returning early is
         // safe. With no ad object ever loaded, the null-guarded show paths in

@@ -51,6 +51,19 @@ object InterstitialShowFingerprint : Fingerprint(
     )
 )
 
+// IZPHPROMain.Y: wipes all app data and restarts the app. It is called by
+// every startup integrity check (library allowlist, DEX class allowlist,
+// layout hash, string hash) and by the in-app reset option. Nopping it lets
+// patched builds boot; it also disables the manual reset option.
+object ResetAppFingerprint : Fingerprint(
+    definingClass = MAIN,
+    name = "Y",
+    returnType = "V",
+    filters = listOf(
+        methodCall(name = "clearApplicationUserData")
+    )
+)
+
 // IZPHPROMain.P: static helper that shows the cached rewarded ad (Q.show).
 object RewardedShowFingerprint : Fingerprint(
     definingClass = MAIN,
