@@ -1,3 +1,9 @@
+## [1.0.0-dev.6](https://github.com/clearpath-mind/morphe-patches/compare/v1.0.0-dev.5...v1.0.0-dev.6) (2026-10-13)
+
+### 🐛 Bug Fixes
+
+* skip native initializeApp kill on re-signed builds ([8a09b63](https://github.com/clearpath-mind/morphe-patches/commit/8a09b6350a8e6b01c4972f1636b36c53f5741c55))
+
 ## [1.0.0-dev.5](https://github.com/clearpath-mind/morphe-patches/compare/v1.0.0-dev.4...v1.0.0-dev.5) (2026-10-13)
 
 ### 🐛 Bug Fixes
